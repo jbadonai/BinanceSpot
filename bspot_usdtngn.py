@@ -14,16 +14,6 @@ try:
     from binance.exceptions import BinanceAPIException
     import os
 
-    # initialize Binance client
-    api_key = input("Binance API key:")
-    api_secret = input("Binance Secret key: ")
-    client = Client(api_key, api_secret)
-    # start trading loop
-    symbol = "USDTNGN"
-    auto_mid_price = False
-    auto_stake_amount = False
-
-
     def clear_screen():
         if os.name == 'posix':
             # For Unix-like systems (e.g. Linux, macOS)
@@ -31,6 +21,18 @@ try:
         elif os.name == 'nt':
             # For Windows
             os.system('cls')
+
+    # initialize Binance client
+    api_key = input("Binance API key:")
+    api_secret = input("Binance Secret key: ")
+    clear_screen()
+    client = Client(api_key, api_secret)
+
+    # start trading loop
+    symbol = "USDTNGN"
+    auto_mid_price = False
+    auto_stake_amount = False
+
 
 
     def convert_seconds(seconds):

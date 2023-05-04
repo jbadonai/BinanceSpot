@@ -13,9 +13,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="302" column="19" lean-forward="true" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
+            <state relative-caret-position="379">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
+                <element signature="e#1688#2324#0" />
                 <element signature="e#4895#4941#0" />
                 <element signature="e#5010#5448#0" />
                 <element signature="e#5518#5960#0" />
@@ -24,6 +25,7 @@
                 <element signature="e#6320#7643#0" />
                 <element signature="e#7717#8424#0" />
                 <element signature="e#8483#10545#0" />
+                <element signature="e#10600#15866#0" />
               </folding>
             </state>
           </provider>
@@ -178,9 +180,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="302" column="19" lean-forward="true" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
+        <state relative-caret-position="379">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
+            <element signature="e#1688#2324#0" />
             <element signature="e#4895#4941#0" />
             <element signature="e#5010#5448#0" />
             <element signature="e#5518#5960#0" />
@@ -189,6 +192,7 @@
             <element signature="e#6320#7643#0" />
             <element signature="e#7717#8424#0" />
             <element signature="e#8483#10545#0" />
+            <element signature="e#10600#15866#0" />
           </folding>
         </state>
       </provider>
