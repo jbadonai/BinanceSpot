@@ -1,6 +1,6 @@
 '''
     OK
-
+    --- jbadonaiventures ---
     IT'S ALL ABOUT SELLING OR BUYNG USDT WITH NGN
     SELL USDT GET NGN
     BUY USDT WITH NGN
@@ -33,8 +33,6 @@ try:
     auto_mid_price = False
     auto_stake_amount = False
 
-
-
     def convert_seconds(seconds):
         days = seconds // (24 * 3600)
         seconds %= 24 * 3600
@@ -52,7 +50,6 @@ try:
             if balance['asset'] == asset:
                 return float(balance['free'])
         return 0
-
 
 
     def get_highest_lowest_prices():
