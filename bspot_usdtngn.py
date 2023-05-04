@@ -24,6 +24,15 @@ try:
     auto_stake_amount = False
 
 
+    def clear_screen():
+        if os.name == 'posix':
+            # For Unix-like systems (e.g. Linux, macOS)
+            os.system('clear')
+        elif os.name == 'nt':
+            # For Windows
+            os.system('cls')
+
+
     def convert_seconds(seconds):
         days = seconds // (24 * 3600)
         seconds %= 24 * 3600
@@ -292,7 +301,7 @@ try:
         global current_order, total_completed_trade_cycle, buy_Dollar_price, stake_dollar_amount, sell_Dollar_price,profit_margin
         counter = 0
         while True:
-            os.system('cls')
+            clear_screen()
             print("=-=-=-=-=-=---=-=-=-=-=-=-=-=-=-=-=-=-===-=-=-=-=-=-=-=-=-===-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
             print(f"TOTAL COMPLETED TRADE CYCLE: {total_completed_trade_cycle}")
             show_trading_stat()

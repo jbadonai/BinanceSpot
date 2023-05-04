@@ -10,21 +10,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+            <state relative-caret-position="243">
+              <caret line="302" column="19" lean-forward="true" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
+              <folding>
+                <element signature="e#4895#4941#0" />
+                <element signature="e#5010#5448#0" />
+                <element signature="e#5518#5960#0" />
+                <element signature="e#6000#6103#0" />
+                <element signature="e#6145#6247#0" />
+                <element signature="e#6320#7643#0" />
+                <element signature="e#7717#8424#0" />
+                <element signature="e#8483#10545#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-189" />
           </provider>
         </entry>
       </file>
@@ -40,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bspot_usdtngn.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/bspot_usdtngn.py" />
       </list>
     </option>
   </component>
@@ -128,11 +145,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -147,17 +164,32 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="302" column="19" lean-forward="true" selection-start-line="302" selection-start-column="19" selection-end-line="302" selection-end-column="19" />
+          <folding>
+            <element signature="e#4895#4941#0" />
+            <element signature="e#5010#5448#0" />
+            <element signature="e#5518#5960#0" />
+            <element signature="e#6000#6103#0" />
+            <element signature="e#6145#6247#0" />
+            <element signature="e#6320#7643#0" />
+            <element signature="e#7717#8424#0" />
+            <element signature="e#8483#10545#0" />
+          </folding>
         </state>
       </provider>
     </entry>
