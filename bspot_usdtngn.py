@@ -348,6 +348,10 @@ try:
                             # time.sleep(5)
                             continue
                     print(">>> sell order filled")
+                else:
+                    print(f"Order Error!")
+                    print(sell_order)
+                    input("press any key to continue...")
 
             # buy order logic
             ngn_balance = get_balance(client, 'NGN')
@@ -383,6 +387,10 @@ try:
                             # time.sleep(5)
                             continue
                     print(">>> buy order filled")
+                else:
+                    print(f"Order Error!")
+                    print(buy_order)
+                    input("press any key to continue...")
 
             # wait for a minute before checking again
             print()

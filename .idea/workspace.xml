@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ab55ed5-5f64-4b9d-b423-a55d2c7de843" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bspot_usdtngn.py" beforeDir="false" afterPath="$PROJECT_DIR$/bspot_usdtngn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/bspot_usdtngn.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/bspot_usdtngn.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/warn-bspot_usdtngn.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/xref-bspot_usdtngn.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,13 +25,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="138">
+              <caret line="390" column="42" lean-forward="true" selection-start-line="390" selection-start-column="42" selection-end-line="390" selection-end-column="42" />
               <folding>
                 <element signature="e#364#558#0" />
+                <element signature="e#888#1114#0" />
+                <element signature="e#1161#1342#0" />
+                <element signature="e#1390#1676#0" />
+                <element signature="e#1722#1915#0" />
+                <element signature="e#1963#2599#0" />
                 <element signature="e#5276#5714#0" />
                 <element signature="e#5784#6226#0" />
                 <element signature="e#6266#6369#0" />
@@ -29,7 +44,8 @@
                 <element signature="e#6586#7909#0" />
                 <element signature="e#7983#8690#0" />
                 <element signature="e#8749#10811#0" />
-                <element signature="e#10866#16130#0" />
+                <element signature="e#11863#13147#0" />
+                <element signature="e#13877#15153#0" />
               </folding>
             </state>
           </provider>
@@ -44,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
@@ -79,8 +95,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/bspot_usdtngn.spec" />
-        <option value="$PROJECT_DIR$/bspot_usdtngn.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/bspot_usdtngn.py" />
       </list>
     </option>
   </component>
@@ -186,24 +202,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#364#558#0" />
-            <element signature="e#5276#5714#0" />
-            <element signature="e#5784#6226#0" />
-            <element signature="e#6266#6369#0" />
-            <element signature="e#6411#6513#0" />
-            <element signature="e#6586#7909#0" />
-            <element signature="e#7983#8690#0" />
-            <element signature="e#8749#10811#0" />
-            <element signature="e#10866#16130#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bspot_usdtngn.spec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -218,6 +216,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="390" column="42" lean-forward="true" selection-start-line="390" selection-start-column="42" selection-end-line="390" selection-end-column="42" />
+          <folding>
+            <element signature="e#364#558#0" />
+            <element signature="e#888#1114#0" />
+            <element signature="e#1161#1342#0" />
+            <element signature="e#1390#1676#0" />
+            <element signature="e#1722#1915#0" />
+            <element signature="e#1963#2599#0" />
+            <element signature="e#5276#5714#0" />
+            <element signature="e#5784#6226#0" />
+            <element signature="e#6266#6369#0" />
+            <element signature="e#6411#6513#0" />
+            <element signature="e#6586#7909#0" />
+            <element signature="e#7983#8690#0" />
+            <element signature="e#8749#10811#0" />
+            <element signature="e#11863#13147#0" />
+            <element signature="e#13877#15153#0" />
+          </folding>
         </state>
       </provider>
     </entry>
