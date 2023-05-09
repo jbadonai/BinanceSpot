@@ -23,6 +23,13 @@ try:
             os.system('cls')
 
     # initialize Binance client
+
+    while True:
+        clear_screen()
+        access_code = input("Access Code? ")
+        if access_code == "jesusislord":
+            break
+
     api_key = input("Binance API key:")
     api_secret = input("Binance Secret key: ")
     clear_screen()
@@ -72,12 +79,15 @@ try:
         return mid_value
 
     def show_trading_stat():
+        global  mid_price, profit_margin, current_order,stake_dollar_amount, sell_Dollar_price, \
+            buy_Dollar_price, stake_dollar_percent
         print()
         print("**********************************************************")
         print("TRADING STATISTICS")
         print("**********************************************************")
+        print(f"[*] - Staked dollar percentage: {stake_dollar_percent}")
         print(f"[*] - mid price: {mid_price}")
-        print(f"[*] - profit margin: {profit_margin}")
+        print(f"[*] - Actual profit margin: N{float(profit_margin) * 2}")
         print(f"[*] - current order: {current_order}")
         print(f"[*] - staked dollar amount: {stake_dollar_amount}")
         print(f"[*] - Sell Dollar price: {sell_Dollar_price}")
@@ -162,7 +172,7 @@ try:
                 timeInForce=TIME_IN_FORCE_GTC,
                 quantity=quantity,
                 price=price)
-            print(f"Buy order placed:")
+            # print(f"Buy order placed:")
             return order
         except BinanceAPIException as e:
             print(f"Error placing buy order: {e}")
@@ -178,7 +188,7 @@ try:
                 timeInForce=TIME_IN_FORCE_GTC,
                 quantity=quantity,
                 price=price)
-            print(f"Sell order placed: ")
+            # print(f"Sell order placed: ")
             return order
         except BinanceAPIException as e:
             print(f"Error placing sell order: {e}")
@@ -297,7 +307,9 @@ try:
 
 
     def start_trading_loop(client, symbol):
-        global current_order, total_completed_trade_cycle, buy_Dollar_price, stake_dollar_amount, sell_Dollar_price,profit_margin
+        global current_order, total_completed_trade_cycle, buy_Dollar_price, \
+            stake_dollar_amount, sell_Dollar_price, profit_margin, stake_dollar_percent
+
         counter = 0
         while True:
             clear_screen()
@@ -339,7 +351,7 @@ try:
 
             # buy order logic
             ngn_balance = get_balance(client, 'NGN')
-            print(f'NGN Balance: {ngn_balance}')
+            # print(f'NGN Balance: {ngn_balance}')
 
             if ngn_balance < buy_Dollar_price:
                 # i.e. balance is less than amount i want to buy 1  unit of USDT. then sell dolllar instead of buying dollar
@@ -392,7 +404,7 @@ try:
 
             if auto_stake_amount is True:
                 usd_bal = get_balance(client, 'USDT')
-                stake_dollar_amount = round((80 / 100) * usd_bal)
+                stake_dollar_amount = round((stake_dollar_percent / 100) * usd_bal)
 
 
     start_trading_loop(client, symbol)
