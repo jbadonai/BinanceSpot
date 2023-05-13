@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/bspot_usdtngn.py" line="317" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/bspot_usdtngn.py" line="271" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ab55ed5-5f64-4b9d-b423-a55d2c7de843" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bspot_usdtngn.py" beforeDir="false" afterPath="$PROJECT_DIR$/bspot_usdtngn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/Analysis-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/EXE-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/PKG-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/PYZ-00.pyz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/PYZ-00.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/base_library.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/bspot_usdtngn.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/bspot_usdtngn.pkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/warn-bspot_usdtngn.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bspot_usdtngn/xref-bspot_usdtngn.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,24 +19,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="390" column="42" lean-forward="true" selection-start-line="390" selection-start-column="42" selection-end-line="390" selection-end-column="42" />
+            <state relative-caret-position="-217">
+              <caret line="38" column="21" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="21" />
               <folding>
                 <element signature="e#364#558#0" />
-                <element signature="e#888#1114#0" />
-                <element signature="e#1161#1342#0" />
-                <element signature="e#1390#1676#0" />
-                <element signature="e#1722#1915#0" />
-                <element signature="e#1963#2599#0" />
-                <element signature="e#5276#5714#0" />
-                <element signature="e#5784#6226#0" />
-                <element signature="e#6266#6369#0" />
-                <element signature="e#6411#6513#0" />
-                <element signature="e#6586#7909#0" />
-                <element signature="e#7983#8690#0" />
-                <element signature="e#8749#10811#0" />
-                <element signature="e#11863#13147#0" />
-                <element signature="e#13877#15153#0" />
+                <element signature="e#1033#1259#0" />
+                <element signature="e#1306#1487#0" />
+                <element signature="e#1867#2060#0" />
+                <element signature="e#2099#2976#0" />
+                <element signature="e#5547#5593#0" />
+                <element signature="e#5662#6102#0" />
+                <element signature="e#6172#6616#0" />
+                <element signature="e#6656#6759#0" />
+                <element signature="e#6801#6903#0" />
+                <element signature="e#6976#8299#0" />
+                <element signature="e#8373#9080#0" />
+                <element signature="e#9323#9659#0" />
+                <element signature="e#9139#11201#0" />
               </folding>
             </state>
           </provider>
@@ -64,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="42">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -86,6 +76,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>auto_mid_price</find>
+      <find>USDTNGN</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -103,8 +94,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
-    <option name="width" value="1941" />
-    <option name="height" value="1050" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -180,14 +171,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19316375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19316375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27531084" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42806393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -202,6 +192,29 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <element signature="e#364#558#0" />
+            <element signature="e#1033#1259#0" />
+            <element signature="e#1306#1487#0" />
+            <element signature="e#1867#2060#0" />
+            <element signature="e#2099#2976#0" />
+            <element signature="e#5547#5593#0" />
+            <element signature="e#5662#6102#0" />
+            <element signature="e#6172#6616#0" />
+            <element signature="e#6656#6759#0" />
+            <element signature="e#6801#6903#0" />
+            <element signature="e#6976#8299#0" />
+            <element signature="e#8373#9080#0" />
+            <element signature="e#9323#9659#0" />
+            <element signature="e#9139#11201#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bspot_usdtngn.spec">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -209,39 +222,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="390" column="42" lean-forward="true" selection-start-line="390" selection-start-column="42" selection-end-line="390" selection-end-column="42" />
-          <folding>
-            <element signature="e#364#558#0" />
-            <element signature="e#888#1114#0" />
-            <element signature="e#1161#1342#0" />
-            <element signature="e#1390#1676#0" />
-            <element signature="e#1722#1915#0" />
-            <element signature="e#1963#2599#0" />
-            <element signature="e#5276#5714#0" />
-            <element signature="e#5784#6226#0" />
-            <element signature="e#6266#6369#0" />
-            <element signature="e#6411#6513#0" />
-            <element signature="e#6586#7909#0" />
-            <element signature="e#7983#8690#0" />
-            <element signature="e#8749#10811#0" />
-            <element signature="e#11863#13147#0" />
-            <element signature="e#13877#15153#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

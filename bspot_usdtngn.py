@@ -60,8 +60,9 @@ try:
 
 
     def get_highest_lowest_prices():
-        # get the 24-hour ticker for USDTNGN
-        ticker = client.get_ticker(symbol='USDTNGN')
+        global symbol
+        # get the 24-hour ticker for symbol
+        ticker = client.get_ticker(symbol=symbol)
 
         # extract the highest and lowest prices
         highest_price = Decimal(ticker['highPrice'])
@@ -80,11 +81,12 @@ try:
 
     def show_trading_stat():
         global  mid_price, profit_margin, current_order,stake_dollar_amount, sell_Dollar_price, \
-            buy_Dollar_price, stake_dollar_percent
+            buy_Dollar_price, stake_dollar_percent, symbol
         print()
         print("**********************************************************")
         print("TRADING STATISTICS")
         print("**********************************************************")
+        print(f"[*] - Symbol: {symbol}")
         print(f"[*] - Staked dollar percentage: {stake_dollar_percent}")
         print(f"[*] - mid price: {mid_price}")
         print(f"[*] - Actual profit margin: N{float(profit_margin) * 2}")
@@ -109,6 +111,13 @@ try:
     change_settings = input("Change Settings? y/n: ")
 
     if change_settings == 'y':
+
+        smb = input("set symbol [ USDTNGN ] :  ")
+        if smb == "":
+            symbol = "USDTNGN"
+        else:
+            symbol = smb
+
         sdp = input("Set stake dollar percentage - [80]: ")
         if sdp == "":
             stake_dollar_percent = stake_dollar_percent_default
@@ -260,6 +269,18 @@ try:
             return None
 
 
+    def get_symbol_info():
+        global symbol, client
+        # Get symbol info for a currency pair
+        symbol_info = client.get_symbol_info(symbol)
+
+        # Extract base and quote currencies from symbol info
+        base_currency = symbol_info['baseAsset']
+        quote_currency = symbol_info['quoteAsset']
+
+        return base_currency, quote_currency
+
+
     def start_trading_loop_bak(client, symbol):
         global current_order
         counter = 0
@@ -320,8 +341,11 @@ try:
             # get current ticker price
             ticker_price = float(get_symbol_ticker(client, symbol)['price'])
 
+            # separate currency into base and quote symbol
+            base_currency, quote_currency = get_symbol_info()
+
             # sell order logic
-            if get_balance(client, 'USDT') > int(stake_dollar_amount) and current_order == 'sell':
+            if get_balance(client, base_currency) > int(stake_dollar_amount) and current_order == 'sell':
                 sell_quantity = int(stake_dollar_amount)
                 sell_order = place_sell_order(client, symbol, sell_quantity, sell_Dollar_price)
                 if sell_order is not None:
@@ -332,7 +356,7 @@ try:
                         try:
                             counter += 1
 
-                            ticker = client.get_ticker(symbol='USDTNGN')
+                            ticker = client.get_ticker(symbol=symbol)
                             lp = Decimal(ticker['lastPrice'])
 
                             print(f"\r> Waiting for sell order to be filled...[{lp}]->[{sell_Dollar_price}] | [ {convert_seconds(counter)} ] | Error count = [{error_counter}]", end="")
@@ -354,15 +378,15 @@ try:
                     input("press any key to continue...")
 
             # buy order logic
-            ngn_balance = get_balance(client, 'NGN')
+            quote_balance = get_balance(client, quote_currency)
             # print(f'NGN Balance: {ngn_balance}')
 
-            if ngn_balance < buy_Dollar_price:
+            if quote_balance < buy_Dollar_price:
                 # i.e. balance is less than amount i want to buy 1  unit of USDT. then sell dolllar instead of buying dollar
                 current_order = 'sell'
 
-            if ngn_balance > 0 and current_order == 'buy':
-                buy_quantity = float(ngn_balance) // float(buy_Dollar_price)
+            if quote_balance > 0 and current_order == 'buy':
+                buy_quantity = float(quote_balance) // float(buy_Dollar_price)
                 # buy_order = place_buy_order(client, symbol, ngn_balance, buy_Dollar_price)
                 buy_order = place_buy_order(client, symbol, buy_quantity, buy_Dollar_price)
                 if buy_order is not None:
@@ -372,7 +396,7 @@ try:
                     while True:
                         try:
                             counter += 1
-                            ticker = client.get_ticker(symbol='USDTNGN')
+                            ticker = client.get_ticker(symbol=symbol)
                             lp = Decimal(ticker['lastPrice'])
                             print(f"\r> Waiting for buy order to be filled...[{lp}]->[{buy_Dollar_price}] | [ {convert_seconds(counter)} ] | Error count = [{error_counter}]", end="")
                             time.sleep(1)
@@ -397,7 +421,7 @@ try:
             print(f"An Order is successfully executed. cooling down to take the next order")
             print()
             total_completed_trade_cycle += 1
-            time.sleep(5)
+            time.sleep(30)
 
             if auto_mid_price is True:
                 # recalculate the sell and buy dollar price
@@ -411,7 +435,7 @@ try:
                 buy_Dollar_price = round(buy_Dollar_price, 1)
 
             if auto_stake_amount is True:
-                usd_bal = get_balance(client, 'USDT')
+                usd_bal = get_balance(client, base_currency)
                 stake_dollar_amount = round((stake_dollar_percent / 100) * usd_bal)
 
 
