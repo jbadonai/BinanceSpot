@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/bspot_usdtngn.py" line="271" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/bspot_usdtngn.py" line="361" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/bspot_usdtngn.py" line="390" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ab55ed5-5f64-4b9d-b423-a55d2c7de843" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bspot_usdtngn.py" beforeDir="false" afterPath="$PROJECT_DIR$/bspot_usdtngn.py" afterDir="false" />
     </list>
@@ -16,26 +18,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-217">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="157">
+              <caret line="414" column="17" selection-start-line="414" selection-start-column="17" selection-end-line="414" selection-end-column="17" />
               <folding>
                 <element signature="e#364#558#0" />
                 <element signature="e#1033#1259#0" />
                 <element signature="e#1306#1487#0" />
-                <element signature="e#1867#2060#0" />
-                <element signature="e#2099#2976#0" />
-                <element signature="e#5547#5593#0" />
-                <element signature="e#5662#6102#0" />
-                <element signature="e#6172#6616#0" />
-                <element signature="e#6656#6759#0" />
-                <element signature="e#6801#6903#0" />
-                <element signature="e#6976#8299#0" />
-                <element signature="e#8373#9080#0" />
-                <element signature="e#9323#9659#0" />
-                <element signature="e#9139#11201#0" />
+                <element signature="e#2117#3043#0" />
+                <element signature="e#3682#5737#0" />
+                <element signature="e#5872#5918#0" />
+                <element signature="e#5987#6427#0" />
+                <element signature="e#6981#7084#0" />
+                <element signature="e#7126#7228#0" />
+                <element signature="e#7301#8624#0" />
+                <element signature="e#8698#9405#0" />
+                <element signature="e#9443#9771#0" />
+                <element signature="e#9830#11892#0" />
               </folding>
             </state>
           </provider>
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            <state relative-caret-position="63">
+              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -77,6 +78,10 @@
     <findStrings>
       <find>auto_mid_price</find>
       <find>USDTNGN</find>
+      <find>profit_margin</find>
+      <find>place_sell_order</find>
+      <find>stake_dollar_amount</find>
+      <find>place_sell_order(</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,8 +91,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/bspot_usdtngn.spec" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bspot_usdtngn.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -102,6 +107,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,7 +119,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -171,13 +176,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19316375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19316375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42806393" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3232682" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -192,25 +198,27 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/bspot_usdtngn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-217">
-          <caret line="38" column="21" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="157">
+          <caret line="414" column="17" selection-start-line="414" selection-start-column="17" selection-end-line="414" selection-end-column="17" />
           <folding>
             <element signature="e#364#558#0" />
             <element signature="e#1033#1259#0" />
             <element signature="e#1306#1487#0" />
-            <element signature="e#1867#2060#0" />
-            <element signature="e#2099#2976#0" />
-            <element signature="e#5547#5593#0" />
-            <element signature="e#5662#6102#0" />
-            <element signature="e#6172#6616#0" />
-            <element signature="e#6656#6759#0" />
-            <element signature="e#6801#6903#0" />
-            <element signature="e#6976#8299#0" />
-            <element signature="e#8373#9080#0" />
-            <element signature="e#9323#9659#0" />
-            <element signature="e#9139#11201#0" />
+            <element signature="e#2117#3043#0" />
+            <element signature="e#3682#5737#0" />
+            <element signature="e#5872#5918#0" />
+            <element signature="e#5987#6427#0" />
+            <element signature="e#6981#7084#0" />
+            <element signature="e#7126#7228#0" />
+            <element signature="e#7301#8624#0" />
+            <element signature="e#8698#9405#0" />
+            <element signature="e#9443#9771#0" />
+            <element signature="e#9830#11892#0" />
           </folding>
         </state>
       </provider>
@@ -224,13 +232,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="63">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

@@ -24,11 +24,11 @@ try:
 
     # initialize Binance client
 
-    while True:
-        clear_screen()
-        access_code = input("Access Code? ")
-        if access_code == "jesusislord":
-            break
+    # while True:
+    #     clear_screen()
+    #     access_code = input("Access Code? ")
+    #     if access_code == "jesusislord":
+    #         break
 
     api_key = input("Binance API key:")
     api_secret = input("Binance Secret key: ")
@@ -89,7 +89,7 @@ try:
         print(f"[*] - Symbol: {symbol}")
         print(f"[*] - Staked dollar percentage: {stake_dollar_percent}")
         print(f"[*] - mid price: {mid_price}")
-        print(f"[*] - Actual profit margin: N{float(profit_margin) * 2}")
+        # print(f"[*] - Actual profit margin: N{float(profit_margin) * 2}")
         print(f"[*] - current order: {current_order}")
         print(f"[*] - staked dollar amount: {stake_dollar_amount}")
         print(f"[*] - Sell Dollar price: {sell_Dollar_price}")
@@ -108,9 +108,10 @@ try:
     sell_buy_quantity = 1
     stake_dollar_percent_default = stake_dollar_percent = 80
 
-    change_settings = input("Change Settings? y/n: ")
 
-    if change_settings == 'y':
+    def change_settings():
+        global symbol, stake_dollar_percent, mid_price, profit_margin, current_order, \
+            stake_dollar_amount, sell_Dollar_price, buy_Dollar_price
 
         smb = input("set symbol [ USDTNGN ] :  ")
         if smb == "":
@@ -155,7 +156,10 @@ try:
             # include percentage as a settings which user can change
             auto_stake_amount = True
             usd_bal = get_balance(client, 'USDT')
+
             stake_dollar_amount = round((stake_dollar_percent/100) * usd_bal)
+            print(f'usdt balance: {usd_bal}')
+            print(f'staked dollar ammount: {stake_dollar_amount}')
 
             pass
         else:
@@ -163,6 +167,12 @@ try:
 
         sell_Dollar_price = mid_price + profit_margin  # sell USDT at high price
         buy_Dollar_price = mid_price - profit_margin  # buy USDT at low price
+
+
+    change_setting = input("Change Settings? y/n: ")
+    if change_setting == 'y':
+        change_settings()
+
 
     sell_Dollar_price = round(sell_Dollar_price,1)
     buy_Dollar_price = round(buy_Dollar_price,1)
@@ -190,6 +200,9 @@ try:
 
     def place_sell_order(client, symbol, quantity, price):
         try:
+            print(f"symbol: {symbol}")
+            print(f"quantity: {quantity}")
+            print(f"price: {price}")
             order = client.create_order(
                 symbol=symbol,
                 side=SIDE_SELL,
@@ -327,9 +340,9 @@ try:
             time.sleep(60)
 
 
-    def start_trading_loop(client, symbol):
+    def start_trading_loop(client):
         global current_order, total_completed_trade_cycle, buy_Dollar_price, \
-            stake_dollar_amount, sell_Dollar_price, profit_margin, stake_dollar_percent
+            stake_dollar_amount, sell_Dollar_price, profit_margin, stake_dollar_percent, symbol
 
         counter = 0
         while True:
@@ -376,6 +389,8 @@ try:
                     print(f"Order Error!")
                     print(sell_order)
                     input("press any key to continue...")
+                    break
+
 
             # buy order logic
             quote_balance = get_balance(client, quote_currency)
@@ -415,6 +430,7 @@ try:
                     print(f"Order Error!")
                     print(buy_order)
                     input("press any key to continue...")
+                    break
 
             # wait for a minute before checking again
             print()
@@ -438,8 +454,17 @@ try:
                 usd_bal = get_balance(client, base_currency)
                 stake_dollar_amount = round((stake_dollar_percent / 100) * usd_bal)
 
+        ans = input("press 't' to restart trading with current settings 'r' to restart trading with new settings Any other key to exit: ")
+        if ans == 't':
+            clear_screen()
+            start_trading_loop(client)
+        elif ans == 'r':
+            clear_screen()
+            change_settings()
+            start_trading_loop(client)
 
-    start_trading_loop(client, symbol)
+
+    start_trading_loop(client)
 
 
 except Exception as e:
