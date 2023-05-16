@@ -200,9 +200,9 @@ try:
 
     def place_sell_order(client, symbol, quantity, price):
         try:
-            print(f"symbol: {symbol}")
-            print(f"quantity: {quantity}")
-            print(f"price: {price}")
+            # print(f"symbol: {symbol}")
+            # print(f"quantity: {quantity}")
+            # print(f"price: {price}")
             order = client.create_order(
                 symbol=symbol,
                 side=SIDE_SELL,
