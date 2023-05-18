@@ -465,7 +465,7 @@ try:
             print(f"An Order is successfully executed. cooling down to take the next order")
             print()
             total_completed_trade_cycle += 1
-            time.sleep(30)
+            time.sleep(5)
 
             if auto_mid_price is True:
                 if use_current_price is False:
