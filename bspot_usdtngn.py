@@ -184,8 +184,16 @@ try:
         else:
             stake_dollar_amount = int(stake_dollar_amount)
 
-        sell_Dollar_price = mid_price + profit_margin  # sell USDT at high price
-        buy_Dollar_price = mid_price - profit_margin  # buy USDT at low price
+        if use_current_price is True:
+            if current_order == "sell":
+                sell_Dollar_price = get_current_price(symbol, client)
+                buy_Dollar_price = sell_Dollar_price - float(profit_margin * 2)
+            else:
+                buy_Dollar_price = get_current_price(symbol, client)
+                sell_Dollar_price = buy_Dollar_price + float(profit_margin * 2)
+        else:
+            sell_Dollar_price = mid_price + profit_margin  # sell USDT at high price
+            buy_Dollar_price = mid_price - profit_margin  # buy USDT at low price
 
 
     change_setting = input("Change Settings? y/n: ")
@@ -380,10 +388,6 @@ try:
             if get_balance(client, base_currency) > int(stake_dollar_amount) and current_order == 'sell':
                 sell_quantity = int(stake_dollar_amount)
 
-                if use_current_price is True:
-                    sell_Dollar_price = get_current_price(symbol, client)
-                    buy_Dollar_price = sell_Dollar_price - float(profit_margin * 2)
-
                 sell_order = place_sell_order(client, symbol, sell_quantity, sell_Dollar_price)
                 if sell_order is not None:
                     current_order = 'buy'
@@ -427,10 +431,6 @@ try:
                 buy_quantity = float(quote_balance) // float(buy_Dollar_price)
                 # buy_order = place_buy_order(client, symbol, ngn_balance, buy_Dollar_price)
 
-                if use_current_price is True:
-                    buy_Dollar_price = get_current_price(symbol, client)
-                    sell_Dollar_price = buy_Dollar_price + float(profit_margin * 2)
-
                 buy_order = place_buy_order(client, symbol, buy_quantity, buy_Dollar_price)
                 if buy_order is not None:
                     current_order = 'sell'
@@ -467,8 +467,15 @@ try:
             total_completed_trade_cycle += 1
             time.sleep(5)
 
-            if auto_mid_price is True:
-                if use_current_price is False:
+            if use_current_price is True:
+                if current_order == "sell":
+                    sell_Dollar_price = get_current_price(symbol, client)
+                    buy_Dollar_price = sell_Dollar_price - float(profit_margin * 2)
+                else:
+                    buy_Dollar_price = get_current_price(symbol, client)
+                    sell_Dollar_price = buy_Dollar_price + float(profit_margin * 2)
+            else:
+                if auto_mid_price is True:
                     # recalculate the sell and buy dollar price
                     mid_price = auto_calculate_mid_price()
                     mid_price = float(mid_price)
@@ -478,9 +485,6 @@ try:
 
                     sell_Dollar_price = round(sell_Dollar_price, 1)
                     buy_Dollar_price = round(buy_Dollar_price, 1)
-                else:
-                    # entry price will be calcualted at the point of placing trade
-                    pass
 
             if auto_stake_amount is True:
                 usd_bal = get_balance(client, base_currency)
