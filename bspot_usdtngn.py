@@ -22,6 +22,18 @@ try:
             # For Windows
             os.system('cls')
 
+
+    def get_current_price(symbol, client):
+        # Initialize Binance API client
+
+        # Retrieve the ticker for the symbol
+        ticker = client.get_symbol_ticker(symbol=symbol)
+
+        # Extract the current price from the ticker
+        current_price = float(ticker['price'])
+
+        return current_price
+
     # initialize Binance client
 
     # while True:
@@ -107,11 +119,12 @@ try:
     total_completed_trade_cycle = 0
     sell_buy_quantity = 1
     stake_dollar_percent_default = stake_dollar_percent = 80
+    use_current_price = False
 
 
     def change_settings():
         global symbol, stake_dollar_percent, mid_price, profit_margin, current_order, \
-            stake_dollar_amount, sell_Dollar_price, buy_Dollar_price
+            stake_dollar_amount, sell_Dollar_price, buy_Dollar_price, use_current_price
 
         smb = input("set symbol [ USDTNGN ] :  ")
         if smb == "":
@@ -124,6 +137,12 @@ try:
             stake_dollar_percent = stake_dollar_percent_default
         else:
             stake_dollar_percent = int(sdp)
+
+        cp = input("Use current price - [True/False]: ")
+        if cp == "":
+            use_current_price = False
+        else:
+            use_current_price = bool(cp)
 
         mid_price = input("Set mid price - [739.5]/auto: ")
         if mid_price == "auto":
@@ -342,7 +361,7 @@ try:
 
     def start_trading_loop(client):
         global current_order, total_completed_trade_cycle, buy_Dollar_price, \
-            stake_dollar_amount, sell_Dollar_price, profit_margin, stake_dollar_percent, symbol
+            stake_dollar_amount, sell_Dollar_price, profit_margin, stake_dollar_percent, symbol, use_current_price
 
         counter = 0
         while True:
@@ -360,6 +379,11 @@ try:
             # sell order logic
             if get_balance(client, base_currency) > int(stake_dollar_amount) and current_order == 'sell':
                 sell_quantity = int(stake_dollar_amount)
+
+                if use_current_price is True:
+                    sell_Dollar_price = get_current_price(symbol, client)
+                    buy_Dollar_price = sell_Dollar_price - float(profit_margin * 2)
+
                 sell_order = place_sell_order(client, symbol, sell_quantity, sell_Dollar_price)
                 if sell_order is not None:
                     current_order = 'buy'
@@ -391,7 +415,6 @@ try:
                     input("press any key to continue...")
                     break
 
-
             # buy order logic
             quote_balance = get_balance(client, quote_currency)
             # print(f'NGN Balance: {ngn_balance}')
@@ -403,6 +426,11 @@ try:
             if quote_balance > 0 and current_order == 'buy':
                 buy_quantity = float(quote_balance) // float(buy_Dollar_price)
                 # buy_order = place_buy_order(client, symbol, ngn_balance, buy_Dollar_price)
+
+                if use_current_price is True:
+                    buy_Dollar_price = get_current_price(symbol, client)
+                    sell_Dollar_price = buy_Dollar_price + float(profit_margin * 2)
+
                 buy_order = place_buy_order(client, symbol, buy_quantity, buy_Dollar_price)
                 if buy_order is not None:
                     current_order = 'sell'
@@ -440,15 +468,19 @@ try:
             time.sleep(30)
 
             if auto_mid_price is True:
-                # recalculate the sell and buy dollar price
-                mid_price = auto_calculate_mid_price()
-                mid_price = float(mid_price)
-                profit_margin = float(profit_margin)
-                sell_Dollar_price = mid_price + profit_margin  # sell USDT at high price
-                buy_Dollar_price = mid_price - profit_margin  # buy USDT at low price
+                if use_current_price is False:
+                    # recalculate the sell and buy dollar price
+                    mid_price = auto_calculate_mid_price()
+                    mid_price = float(mid_price)
+                    profit_margin = float(profit_margin)
+                    sell_Dollar_price = mid_price + profit_margin  # sell USDT at high price
+                    buy_Dollar_price = mid_price - profit_margin  # buy USDT at low price
 
-                sell_Dollar_price = round(sell_Dollar_price, 1)
-                buy_Dollar_price = round(buy_Dollar_price, 1)
+                    sell_Dollar_price = round(sell_Dollar_price, 1)
+                    buy_Dollar_price = round(buy_Dollar_price, 1)
+                else:
+                    # entry price will be calcualted at the point of placing trade
+                    pass
 
             if auto_stake_amount is True:
                 usd_bal = get_balance(client, base_currency)
